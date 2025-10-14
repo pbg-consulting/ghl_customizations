@@ -1,0 +1,191 @@
+/* ================================================
+   PBG CONSULTING - GREEN INSURANCE LOGIN STYLES
+   Protected File - Key: PBG-GREEN-INSURANCE-LOGIN-001
+   ================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #0a2714 0%, #1a3d2a 50%, #0a2714 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(107, 194, 74, 0.1) 0%, transparent 70%);
+  animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 0.5; 
+  }
+  50% { 
+    transform: scale(1.1); 
+    opacity: 0.8; 
+  }
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: linear-gradient(to top, rgba(107, 194, 74, 0.2) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  width: 280px;
+  height: auto;
+  display: block;
+  margin: 0 auto 32px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 32px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.form-group {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #6bc24a;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 3px rgba(107, 194, 74, 0.1);
+}
+
+.forgot-password {
+  display: inline-block;
+  margin-top: 8px;
+  color: #6bc24a;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.forgot-password:hover {
+  color: #5aa63d;
+  text-decoration: underline;
+}
+
+.sign-in-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #6bc24a 0%, #5aa63d 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(107, 194, 74, 0.3);
+}
+
+.sign-in-btn:hover {
+  background: linear-gradient(135deg, #5aa63d 0%, #4d8f34 100%);
+  box-shadow: 0 6px 16px rgba(107, 194, 74, 0.4);
+  transform: translateY(-1px);
+}
+
+.sign-in-btn:active {
+  transform: translateY(0);
+}
+
+.terms {
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 24px 0 0;
+}
+
+.terms a {
+  color: #6bc24a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.terms a:hover {
+  color: #5aa63d;
+  text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 36px 24px;
+  }
+  
+  .logo {
+    width: 240px;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+}
