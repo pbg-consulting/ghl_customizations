@@ -240,6 +240,11 @@
     display: block !important;
 }
 
+/* Span Tag - Email and Password labels */
+.card-body form span {
+    color: #ffffff !important;
+}
+
 /* Buttons */
 .card-body button[type="submit"],
 .card-body div .focus\:outline-none,
