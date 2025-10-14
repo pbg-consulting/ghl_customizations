@@ -202,7 +202,22 @@
     margin-bottom: 30px !important;
 }
 
-.card-body input[type="email"],
+/* Labels - Multiple selectors to catch all variations */
+.card-body label,
+.card-body form span,
+.card-body form label,
+.card-body span {
+    color: #ffffff !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+.card-body label {
+    margin-bottom: 8px !important;
+    margin-top: 12px !important;
+    display: block !important;
+}
 .card-body input[type="password"],
 .card-body input[type="text"] {
     background: rgba(255, 255, 255, 0.08) !important;
@@ -230,20 +245,7 @@
     color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.card-body label {
-    color: #ffffff !important;
-    font-family: 'Poppins', sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    margin-bottom: 8px !important;
-    margin-top: 12px !important;
-    display: block !important;
-}
-
-/* Span Tag - Email and Password labels */
-.card-body form span {
-    color: #ffffff !important;
-}
+/* Remove the old label styling that was here */
 
 /* Buttons */
 .card-body button[type="submit"],
