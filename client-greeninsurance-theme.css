@@ -53,7 +53,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+    margin-top: -80px;
     z-index: 11;
     pointer-events: none;
 }
@@ -230,7 +231,7 @@
 }
 
 .card-body label {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #ffffff !important;
     font-family: 'Poppins', sans-serif !important;
     font-size: 13px !important;
     font-weight: 500 !important;
@@ -322,6 +323,8 @@
     .hl_login .hl_login--body::before {
         width: 250px;
         height: 75px;
+        margin-top: -120px;
+        margin-bottom: 20px;
     }
 }
 
