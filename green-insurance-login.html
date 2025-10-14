@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Insurance - Sign In</title>
+  
+  <!-- ================================================
+       PBG CONSULTING - LOGIN PAGE PROTECTION
+       Key: PBG-GREEN-INSURANCE-LOGIN-001
+       ================================================ -->
+  <script>
+  (function() {
+    const instant = document.createElement('style');
+    instant.textContent = `
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: linear-gradient(135deg, #0a2714 0%, #1a3d2a 50%, #0a2714 100%);
+        min-height: 100vh;
+      }
+    `;
+    
+    if (document.head) {
+      document.head.insertBefore(instant, document.head.firstChild);
+    }
+    
+    // Load protected styles from PBG API via Cloudflare
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://api.gopbgconsulting.com/green-insurance-login.css?key=PBG-GREEN-INSURANCE-LOGIN-001&v=1';
+    document.head.appendChild(link);
+  })();
+  </script>
+  <!-- ================================================ -->
+</head>
+<body>
+  <div class="login-container">
+    <img src="https://storage.googleapis.com/msgsndr/YtNhoKQqqoEZSVFceqZm/media/68ee77964ae0e040c5da1649.png" alt="Green Insurance Logo" class="logo">
+    
+    <h2>Sign into your account</h2>
+    
+    <form id="loginForm" action="https://crm.gogreeninsurance.com/login" method="POST">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Your email address" 
+          required
+        >
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="The password you picked" 
+          required
+        >
+        <a href="https://crm.gogreeninsurance.com/forgot-password" class="forgot-password">Forgot password?</a>
+      </div>
+      
+      <button type="submit" class="sign-in-btn">SIGN IN</button>
+      
+      <p class="terms">By signing in you agree to our <a href="https://crm.gogreeninsurance.com/terms" target="_blank">Terms and Conditions</a></p>
+    </form>
+  </div>
+
+  <!-- Load protected JavaScript from PBG API via Cloudflare -->
+  <script src="https://api.gopbgconsulting.com/green-insurance-login.js?key=PBG-GREEN-INSURANCE-LOGIN-001&v=1"></script>
+</body>
+</html>
