@@ -11,7 +11,6 @@
    LOGIN PAGE STYLING ONLY
    ======================================== */
 
-/* Green/Nature Background - LOGIN ONLY */
 .hl_login {
     background: linear-gradient(135deg, #0a2714 0%, #1a3d2a 50%, #0a2714 100%) !important;
     min-height: 100vh !important;
@@ -43,7 +42,7 @@
     width: 100% !important;
 }
 
-/* Logo Above Card - LOGIN ONLY */
+/* Logo Above Card */
 .hl_login .hl_login--body::before {
     content: '';
     display: block;
@@ -59,7 +58,7 @@
     pointer-events: none;
 }
 
-/* Moving Green Particles - LOGIN PAGE ONLY */
+/* Moving Green Particles */
 .hl_login::before {
     content: '';
     position: absolute;
@@ -108,7 +107,7 @@
         220px 160px 0 0 rgba(90, 166, 61, 0.9);
 }
 
-/* Digital Grid Lines - LOGIN PAGE ONLY */
+/* Digital Grid Lines */
 .hl_login .hl_login--body .container-fluid::before {
     content: '';
     position: absolute;
@@ -144,7 +143,6 @@
         200px 100px 0 0 #5aa63d;
 }
 
-/* Animations */
 @keyframes particle1 {
     0%, 100% { transform: translate3d(0, 0, 0); opacity: 0; }
     10%, 90% { opacity: 1; }
@@ -192,7 +190,7 @@
     padding: 0 !important;
 }
 
-/* Form Elements */
+/* Form Heading */
 .card-body .login-card-heading h2 {
     font-family: 'Poppins', sans-serif !important;
     font-size: 22px !important;
@@ -219,20 +217,35 @@
     display: block !important;
 }
 
-/* Eye Icon Fix - Password Field */
-.card-body form .relative {
+/* ── EYE ICON FIX ─────────────────────────────────────────────
+   GHL wraps the password input and eye toggle inside a .relative
+   div. We anchor that wrapper, then pin the eye icon to the
+   right edge with enough specificity to override GHL defaults.
+   ──────────────────────────────────────────────────────────── */
+.hl_login .card-body .relative,
+.hl_login .card-body form .relative,
+.hl_login--body .card .card-body .relative {
     position: relative !important;
+    display: block !important;
 }
 
-.card-body form .cursor-pointer {
+.hl_login .card-body .relative .cursor-pointer,
+.hl_login .card-body form .relative .cursor-pointer,
+.hl_login--body .card .card-body .relative .cursor-pointer {
     position: absolute !important;
-    right: 0 !important;
-    top: 0 !important;
-    bottom: 0 !important;
+    right: 14px !important;
+    top: 50% !important;
+    transform: translateY(-60%) !important;
+    bottom: auto !important;
+    left: auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding-right: 14px !important;
+    z-index: 5 !important;
+    pointer-events: all !important;
+    cursor: pointer !important;
+    width: 24px !important;
+    height: 24px !important;
 }
 
 /* Inputs */
@@ -250,8 +263,10 @@
     margin-bottom: 8px !important;
 }
 
-.card-body input[type="password"] {
-    padding-right: 50px !important;
+/* Password field: extra right padding so text never slides under the eye */
+.hl_login .card-body input[type="password"],
+.hl_login--body .card .card-body input[type="password"] {
+    padding-right: 52px !important;
 }
 
 .card-body input[type="email"]:focus,
@@ -342,11 +357,11 @@
         padding: 40px 30px !important;
         margin: 20px !important;
     }
-    
+
     .card-body .login-card-heading h2 {
         font-size: 20px !important;
     }
-    
+
     .hl_login .hl_login--body::before {
         width: 250px;
         height: 75px;
@@ -359,7 +374,6 @@
    DASHBOARD STYLING (NOT LOGIN)
    ======================================== */
 
-/* Poppins Font for Entire Dashboard */
 body:not(.hl_login) {
     font-family: 'Poppins', sans-serif !important;
 }
@@ -367,11 +381,11 @@ body:not(.hl_login) {
 body:not(.hl_login) p,
 body:not(.hl_login) span:not([class*="icon"]):not([class*="Icon"]),
 body:not(.hl_login) div:not([class*="icon"]):not([class*="Icon"]),
-body:not(.hl_login) h1, 
-body:not(.hl_login) h2, 
-body:not(.hl_login) h3, 
-body:not(.hl_login) h4, 
-body:not(.hl_login) h5, 
+body:not(.hl_login) h1,
+body:not(.hl_login) h2,
+body:not(.hl_login) h3,
+body:not(.hl_login) h4,
+body:not(.hl_login) h5,
 body:not(.hl_login) h6,
 body:not(.hl_login) a:not([class*="icon"]):not([class*="Icon"]),
 body:not(.hl_login) label,
@@ -383,7 +397,6 @@ body:not(.hl_login) th {
     font-family: 'Poppins', sans-serif !important;
 }
 
-/* Bold Buttons */
 body:not(.hl_login) button,
 body:not(.hl_login) [role="button"],
 body:not(.hl_login) .btn,
@@ -393,12 +406,11 @@ body:not(.hl_login) input[type="button"] {
     font-weight: 700 !important;
 }
 
-/* Sidebar Background - Green Gradient */
+/* Sidebar */
 #sidebar-v2 {
     background-image: linear-gradient(-46deg, #3fa049 0%, #2e3d30 38%) !important;
 }
 
-/* Logo Styling */
 #sidebar-v2 .agency-logo-container {
     padding: 20px 15px !important;
     cursor: pointer !important;
@@ -418,7 +430,6 @@ body:not(.hl_login) input[type="button"] {
     transform: scale(1.02) !important;
 }
 
-/* Logo Scaling */
 .transition-slowest .flex-col img {
     transform: scale(1.17);
     float: none;
@@ -431,7 +442,6 @@ body:not(.hl_login) input[type="button"] {
     }
 }
 
-/* Active Menu Items - Green */
 #sidebar-v2 nav a[aria-current="page"],
 #sidebar-v2 nav a.router-link-active,
 #sidebar-v2 nav a.active {
@@ -440,7 +450,6 @@ body:not(.hl_login) input[type="button"] {
     border-radius: 8px !important;
 }
 
-/* Inactive Menu Items */
 #sidebar-v2 nav a:not([aria-current="page"]):not(.router-link-active):not(.active) {
     background-color: transparent !important;
 }
@@ -465,7 +474,7 @@ body:not(.hl_login) input[type="button"] {
 }
 
 #pbg-quote-modal {
-    background: #ffffff;
+    background: transparent;
     border-radius: 16px;
     width: 90%;
     max-width: 960px;
@@ -473,10 +482,8 @@ body:not(.hl_login) input[type="button"] {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.4),
-        0 0 40px rgba(107, 194, 74, 0.2);
-    border: 1px solid rgba(107, 194, 74, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: none;
 }
 
 #pbg-quote-header {
@@ -486,6 +493,7 @@ body:not(.hl_login) input[type="button"] {
     align-items: center;
     justify-content: space-between;
     flex-shrink: 0;
+    border-radius: 16px 16px 0 0;
 }
 
 #pbg-quote-header-left {
@@ -552,36 +560,10 @@ body:not(.hl_login) input[type="button"] {
     border: none;
     width: 100%;
     display: block;
+    border-radius: 0 0 16px 16px;
 }
 
-#pbg-quote-footer {
-    background: #f4f6f4;
-    padding: 10px 24px;
-    text-align: center;
-    flex-shrink: 0;
-    border-top: 1px solid #e2e8e2;
-}
-
-#pbg-quote-footer span {
-    font-family: 'Poppins', sans-serif;
-    font-size: 11px;
-    color: #8a9a8a;
-    font-weight: 400;
-}
-
-#pbg-quote-footer a {
-    color: #5aa63d;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease;
-}
-
-#pbg-quote-footer a:hover {
-    color: #6bc24a;
-    text-decoration: underline;
-}
-
-/* Floating New Quote Button */
+/* Floating New Opportunity Button */
 #pbg-new-quote-btn {
     position: fixed;
     bottom: 30px;
@@ -646,7 +628,6 @@ html, body {
     padding: 0;
 }
 
-/* Logo for loader */
 .hl-loader-info {
     display: block !important;
     width: 350px !important;
@@ -660,7 +641,6 @@ html, body {
     pointer-events: none !important;
 }
 
-/* Moving Green Particles - LOADER */
 .hl-loader-container::before {
     content: '';
     position: absolute;
